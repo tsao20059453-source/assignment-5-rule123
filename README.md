@@ -24,7 +24,7 @@ def theory_any(n: int) -> float:
     if n >= 6: prod *= (1.0 - alpha3_win6)**(n - 5)
     return 1.0 - prod
 
-def simulate_any(n: int, reps: int = 50_000, seed: int = 2025) -> float:
+def simulate_any(n: int, reps: int = 10_000, seed: int = 2025) -> float:
     rng = np.random.default_rng(seed + n + reps)
     Z = rng.normal(0.0, 1.0, size=(reps, n))
 
